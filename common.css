@@ -20,7 +20,9 @@ img {
     */
     object-fit: cover;
 }
-
+button{
+    border: none;
+}
 /* コンテンツ幅 */
 .contents {
     margin: 0 15%;
@@ -186,18 +188,19 @@ header {
     height: 3vw;
     position: absolute;
     bottom: 0;
+    transform: translateX(50%);
 }
 .page-this{
     width: 2vw;
     height: 3vw;
-    background-color: blue;
+    background-color: #5f6527;
     margin-right: 5%;
 }
 .page{
     width: 2vw;
     height: 2vw;
     margin-right: 5%;
-    background-color: blue;
+    background-color: #767c36;
     transform: translateY(50%);
 }
 
@@ -224,4 +227,21 @@ header {
     background-image: url(img/dog_500px.png);
     width: 25vw;
     height: 25vw;
+}
+
+/* 製作物   */
+
+
+.ContainerBox {
+    display: flex;
+    height: 20vw;
+}
+
+.Container{
+    width: 20vw;
+    height: 15vw;
+    background-color: rgb(95 95 95 / 15%);
+    margin: 0px 3vw;
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px rgb(0 0 0 / 30%);
 }
