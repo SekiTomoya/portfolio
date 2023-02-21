@@ -31,7 +31,8 @@ button{
 /* ファーストビュー */
 .view{
     background-image: url('img/firstview.png');
-    height: 1080px;
+    background-size: cover;
+    height: 961px;
 }
 /* 固定背景 */
 .background {
@@ -45,7 +46,7 @@ button{
 /* 説明フォント */
 .dsp-font {
     margin-top: 5vw;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     display: inline-block;
     width: 60vw;
@@ -65,6 +66,8 @@ header {
 #nav-drawer {
     position: relative;
     text-align: right;
+    right: 2vw;
+    height: 100%;
 }
 
 /*チェックボックス等は非表示に*/
@@ -90,6 +93,7 @@ header {
     display: block;
     content: '';
     cursor: pointer;
+    margin-top: 1vw;
 }
 #nav-open span:before {
     bottom: -13px;
@@ -175,8 +179,12 @@ header {
     font-size: 5rem;
 }
 
+.logo{
+    width: 6vw;
+}
 .btn-dog{
     background-image: url(img/nikukyu.png);
+    background-size: cover;
     width: 25vw;
     height: 25vw;
     transform: translateX(142%);
@@ -225,16 +233,20 @@ header {
 }
 .dogicon{
     background-image: url(img/dog_500px.png);
+    background-size: cover;
     width: 25vw;
     height: 25vw;
 }
 
 /* 製作物   */
 
+.margin-top{
+    margin-top:8vw;
+}
 
 .ContainerBox {
     display: flex;
-    height: 20vw;
+    height: 16vw;
 }
 
 .Container{
@@ -244,4 +256,56 @@ header {
     margin: 0px 3vw;
     border-radius: 20px;
     box-shadow: 5px 5px 4px rgb(0 0 0 / 30%);
+}
+
+.web-img {
+    background-image: url(img/btn-img-websystem.png);
+    background-size: cover;
+}
+
+.embedded-img{
+    background-image: url(img/btn-img-embeddedsystem.png);
+    background-size: cover;
+}
+.ContainerText{
+    display: flex;
+}
+
+.text{
+    font-size: 2rem;
+    width: 20vw;
+    margin: 0px 3vw;
+    margin-bottom: 4vw;
+}
+
+.AllBox{
+    display: flex;
+    width: 100%;
+    height: 25vw;
+    text-align: left;
+}
+
+.DescriptionBox{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.leftBox{
+    width: 50%;
+    padding-right: 5px;
+}
+
+.rightBox{
+    width: 50%;
+    background-image: url(img/btn-img-websystem.png);
+    background-size: revert;
+}
+
+.d-text{
+    font-size: 1.2rem;
+}
+
+.AllBox h3{
+    margin: 5px 0;
 }
