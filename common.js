@@ -38,3 +38,23 @@ function close(elem) {
   elem.style.setProperty("align-items", "", "");
   elem.style.setProperty("justify-content", "", "");
 }
+
+function checkForm(){
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let contact = document.getElementById('contact');
+
+  if( name.value.trim() === "" ){
+    alert('お名前を入力してください。');
+    return false;
+  }
+  if( email.value.trim() === "" ){
+    alert('メールアドレスを入力してください');
+    return false;
+  }
+  if( contact.value.trim() === "" ){
+    alert('お問い合わせ内容を入力してください。');
+    return false;
+  }
+  return true;
+}

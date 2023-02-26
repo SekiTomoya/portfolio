@@ -9,6 +9,7 @@ body {
 	max-width: 100%;
 	font-size: 1.6rem;
     overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
 div {
 	position: relative;
@@ -28,11 +29,43 @@ button{
     margin: 0 15%;
 }
 
+a{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
 /* ファーストビュー */
 .view{
     background-image: url('img/firstview.png');
     background-size: cover;
-    height: 961px;
+    height: 914px;
+}
+
+/*　スクロールバーデザイン  */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: #f0841a33;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #f0841a;
+    border-radius: 10px;
+}
+
+.btn-Ham{
+    text-align: left;
+    width: 100%;
+    height: 3vw;
+    line-height: 3vw;
+    padding-left: 1vw;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #80808080;
+}
+
+.btn-Ham:hover {
+    background-color: #80808080;
 }
 /* 固定背景 */
 .background {
@@ -46,10 +79,11 @@ button{
 /* 説明フォント */
 .dsp-font {
     margin-top: 5vw;
-    font-size: 3rem;
+    padding-top: 3vw;
+    font-size: 2.5rem;
     font-weight: bold;
     display: inline-block;
-    width: 60vw;
+    width: 40vw;
     text-align: left;
 }
 
@@ -118,6 +152,7 @@ header {
 
 /*メニューの中身*/
 #nav-content {
+    text-align: left;
     overflow: auto;
     position: fixed;
     top: 0;
@@ -169,18 +204,21 @@ header {
 
 .top-area{
     text-align: center;
+    padding-bottom: 3%;
+
 }
 
 .top-area h1{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .top-area h2{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .logo{
     width: 6vw;
+    margin-left: 2vw;
 }
 .btn-dog{
     background-image: url(img/nikukyu.png);
@@ -228,6 +266,20 @@ header {
     position: relative;
     background-color: #fff;
 }
+
+.s_aboutmake{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom:0%;
+    height: auto;
+    position: relative;
+}
+
+.s_aboutmake .top-area{
+    text-align: center;
+    padding-bottom: 8%;
+}
 .about-me{
     display: flex;
 }
@@ -269,6 +321,7 @@ header {
 }
 .ContainerText{
     display: flex;
+    font-weight: bold;
 }
 
 .text{
@@ -289,6 +342,7 @@ header {
     height: 50%;
     width: 100%;
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 .leftBox{
@@ -303,9 +357,396 @@ header {
 }
 
 .d-text{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .AllBox h3{
     margin: 5px 0;
+}
+
+.rightBox-enbded{
+    width: 50%;
+    background-image: url(img/btn-img-embeddedsystem.png);
+    background-size: revert;
+}
+
+.s_SkilSet{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    height: auto;
+    position: relative;
+    background-color: #fff;
+}
+
+.s_Profile{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    height: auto;
+    position: relative;
+}
+.sub-title{
+    margin: 3vw 0;
+    font-size: 2rem;
+}
+.sub-text{
+    width: 50%;
+    margin: 3vw 0;
+    font-size: 1.5rem;
+    text-align: left;
+    transform: translateX(50%);
+}
+/* タイムライン */
+/* アニメーション設定 */
+.scr-target {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+}
+.scr-target.is-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 1s;
+}
+
+
+.timeline {
+    height: 3200px;
+    width: 100%;
+    margin: 28px auto;
+    border: 1px solid #eeeeee;
+}
+
+.timeline-list {
+    padding: 40px 0;
+}
+
+.timeline-list-item {
+    display: flex;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.timeline-list-item .date {
+    font-size: 3rem;
+    width: 20%;
+    padding: 0 0 0 20px;
+    color: #888888;
+    font-weight: bold;
+    margin-top: -1vw;
+}
+
+.timeline-list-item .content {
+    position: relative;
+    width: 80%;
+    padding: 0 20px 60px 30px;
+    border-left: 10px solid #ffa500;
+    text-align: left;
+}
+
+.timeline-list-item .content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -25px;
+    width: 40px;
+    height: 40px;
+    background-color: #f0841a;
+    border-radius: 20px;
+}
+
+.circle {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/Haskey.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.circle-2015 {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/IT.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.circle-2017 {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/pgschool.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.circle-2019 {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/ITPG.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.circle-2021 {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/nayami.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.circle-2022 {
+    width: 15vw;
+    height: 15vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/sun.png);
+    border-radius: 50%;
+    border: 5px solid #f0841a;
+    color: #fff;
+    text-align: center;
+}
+.message{
+    font-size: 2rem;
+    width: 100%;
+    height: auto;
+    line-height: 5vw;
+    background-color: #f0841a42;
+    border-left: 2vw solid orange;
+    padding-left: 1vw;
+    margin-top: 2vw;
+}
+.message-child{
+    font-size: 1.5rem;
+    line-height: 3vw;
+}
+
+.s_contactfrome{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+    position: relative;
+    background-color: #fff;
+}
+
+.Form {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+@media screen and (max-width: 480px) {
+.Form {
+    margin-top: 40px;
+}
+}
+.Form-Item {
+
+padding-top: 24px;
+padding-bottom: 24px;
+width: 100%;
+display: flex;
+align-items: center;
+}
+@media screen and (max-width: 480px) {
+.Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+}
+}
+.Form-Item:nth-child(5) {
+
+}
+.Form-Item-Label {
+    width: 100%;
+    max-width: 248px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+}
+.Form-Item-Label.isMsg {
+margin-top: 8px;
+margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label.isMsg {
+    margin-top: 0;
+}
+}
+.Form-Item-Label-Required {
+border-radius: 6px;
+margin-right: 8px;
+padding-top: 8px;
+padding-bottom: 8px;
+width: 48px;
+display: inline-block;
+text-align: center;
+background: #545454;
+color: #fff;
+font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+}
+}
+.Form-Item-Input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 48px;
+    flex: 1;
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+}
+}
+.Form-Item-Textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 216px;
+    flex: 1;
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+}
+}
+.Form-Btn {
+    border-radius: 6px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 280px;
+    display: block;
+    letter-spacing: 0.05em;
+    background: #545454;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+.Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+}
+}
+
+.f-top{
+    height: 8vw;
+    background-color: orange;
+}
+.f-bottom{
+    height: 5vw;
+    background-color: #b47904;
+}
+.backtop{
+    width: 5vw;
+    height: 5vw;
+    line-height: 200px;
+    background-color: green;
+    background-image: url(img/backtop.png);
+    border-radius: 50%;
+    border: 4px solid #b47904;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(-40%);
+}
+
+/* グラフ   */
+#mytable {
+    width: 80%;
+    height: 15vw;
+    margin: 0 10%;
+}
+
+.graphTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.graphtext {
+    padding-top: 1vw !important;
+    font-size: 1.5rem;
+}
+
+.subtitle{
+    text-align: left;
+    width: 20vw;
+    border-bottom: 5px solid orange;
+    padding-left: 10vw;
+    margin-top: 4vw;
+}
+
+.subtextbox{
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 1.5rem;
+}
+
+.subtext{
+    display: block;
 }
