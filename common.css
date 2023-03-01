@@ -61,6 +61,7 @@ a{
     line-height: 3vw;
     padding-left: 1vw;
     font-size: 1.5rem;
+    font-weight: bold;
     border-bottom: 1px solid #80808080;
 }
 
@@ -282,12 +283,13 @@ header {
 }
 .about-me{
     display: flex;
+    padding: 0 10%;
 }
 .dogicon{
     background-image: url(img/dog_500px.png);
     background-size: cover;
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
 }
 
 /* 製作物   */
@@ -384,18 +386,21 @@ header {
     padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     height: auto;
     position: relative;
 }
 .sub-title{
     margin: 3vw 0;
+    padding: 0 15vw;
     font-size: 2rem;
+    font-weight: bold;
 }
 .sub-text{
     width: 50%;
     margin: 3vw 0;
     font-size: 1.5rem;
+    font-weight: bold;
     text-align: left;
     transform: translateX(50%);
 }
@@ -413,10 +418,9 @@ header {
 
 
 .timeline {
-    height: 3200px;
+    height: auto;
     width: 100%;
     margin: 28px auto;
-    border: 1px solid #eeeeee;
 }
 
 .timeline-list {
@@ -458,66 +462,72 @@ header {
 }
 
 .circle {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/Haskey.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
     text-align: center;
 }
 .circle-2015 {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/IT.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
     text-align: center;
 }
 .circle-2017 {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/pgschool.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
     text-align: center;
 }
 .circle-2019 {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/ITPG.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
     text-align: center;
 }
 .circle-2021 {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/nayami.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
     text-align: center;
 }
 .circle-2022 {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     line-height: 200px;
     background-color: green;
     background-image: url(img/sun.png);
+    background-size: cover;
     border-radius: 50%;
     border: 5px solid #f0841a;
     color: #fff;
@@ -669,6 +679,7 @@ font-size: 14px;
 }
 }
 .Form-Btn {
+    border: none;
     border-radius: 6px;
     margin-top: 32px;
     margin-left: auto;
@@ -678,7 +689,7 @@ font-size: 14px;
     width: 280px;
     display: block;
     letter-spacing: 0.05em;
-    background: #545454;
+    background: #b47904;
     color: #fff;
     font-weight: bold;
     font-size: 20px;
@@ -745,8 +756,10 @@ font-size: 14px;
     text-align: left;
     margin-left: 10vw;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .subtext{
     display: block;
+    line-height: 1.5vw;
 }
